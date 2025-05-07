@@ -24,6 +24,7 @@ local variants = {
 		_nc = "#1f1d30",
 		base = "#232136",
 		surface = "#2a273f",
+		-- overlay = "#333344",
 		overlay = "#393552",
 		muted = "#6e6a86",
 		subtle = "#908caa",

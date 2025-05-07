@@ -16,7 +16,7 @@ local function set_highlights()
 		return {
 			fg = fg,
 			bg = (config.options.extend_background_behind_borders and not styles.transparency) and palette.surface
-				or "NONE",
+					or "NONE",
 		}
 	end
 
@@ -26,14 +26,14 @@ local function set_highlights()
 		["@boolean"] = { link = "Boolean" },
 		["@class"] = { fg = palette.foam },
 		["@conditional"] = { link = "Conditional" },
-		["@field"] = { fg = palette.foam },
+		["@field"] = { fg = palette.text },
 		["@include"] = { link = "Include" },
 		["@interface"] = { fg = palette.foam },
 		["@macro"] = { link = "Macro" },
 		["@method"] = { fg = palette.rose },
 		["@namespace"] = { link = "Include" },
 		["@number"] = { link = "Number" },
-		["@parameter"] = { fg = palette.iris, italic = styles.italic },
+		["@parameter"] = { fg = palette.text, italic = styles.italic },
 		["@preproc"] = { link = "PreProc" },
 		["@punctuation"] = { fg = palette.subtle },
 		["@punctuation.bracket"] = { link = "@punctuation" },
@@ -183,13 +183,13 @@ local function set_highlights()
 		DiagnosticVirtualTextOk = { fg = groups.ok, bg = groups.ok, blend = 10 },
 		DiagnosticVirtualTextWarn = { fg = groups.warn, bg = groups.warn, blend = 10 },
 
-		Boolean = { fg = palette.rose },
+		Boolean = { fg = palette.foam },
 		Character = { fg = palette.gold },
 		Comment = { fg = palette.subtle, italic = styles.italic },
 		Conditional = { fg = palette.pine },
 		Constant = { fg = palette.gold },
 		Debug = { fg = palette.rose },
-		Define = { fg = palette.iris },
+		Define = { fg = palette.text },
 		Delimiter = { fg = palette.subtle },
 		Error = { fg = palette.love },
 		Exception = { fg = palette.pine },
@@ -205,10 +205,10 @@ local function set_highlights()
 		LspReferenceRead = { bg = palette.highlight_med },
 		LspReferenceText = { bg = palette.highlight_med },
 		LspReferenceWrite = { bg = palette.highlight_med },
-		Macro = { fg = palette.iris },
+		Macro = { fg = palette.text },
 		Number = { fg = palette.gold },
 		Operator = { fg = palette.subtle },
-		PreCondit = { fg = palette.iris },
+		PreCondit = { fg = palette.text },
 		PreProc = { link = "PreCondit" },
 		Repeat = { fg = palette.pine },
 		Special = { fg = palette.foam },
@@ -275,21 +275,26 @@ local function set_highlights()
 		--- |:help treesitter-highlight-groups|
 		["@variable"] = { fg = palette.text, italic = styles.italic },
 		["@variable.builtin"] = { fg = palette.love, italic = styles.italic, bold = styles.bold },
-		["@variable.parameter"] = { fg = palette.iris, italic = styles.italic },
-		["@variable.parameter.builtin"] = { fg = palette.iris, italic = styles.italic, bold = styles.bold },
-		["@variable.member"] = { fg = palette.foam },
+		["@variable.parameter"] = { fg = palette.text, italic = styles.italic },
+		["@variable.parameter.c"] = { fg = palette.text, italic = styles.italic },
+		["@variable.parameter.builtin"] = { fg = palette.text, italic = styles.italic, bold = styles.bold },
+		["@variable.member"] = { fg = palette.text },
 
-		["@constant"] = { fg = palette.gold },
-		["@constant.builtin"] = { fg = palette.gold, bold = styles.bold },
-		["@constant.macro"] = { fg = palette.gold },
+		["@constant"] = { fg = palette.pine },
+		["@constant.builtin"] = { fg = palette.pine, bold = styles.bold },
+		["@constant.macro"] = { fg = palette.pine },
+		["@constant.macro.c"] = { fg = palette.text },
+		["@constant.c"] = { fg = palette.text },
 
 		["@module"] = { fg = palette.text },
 		["@module.builtin"] = { fg = palette.text, bold = styles.bold },
+		["@module.c"] = { fg = palette.pine },
+		["@module.cpp"] = { fg = palette.pine },
 		["@label"] = { link = "Label" },
 
 		["@string"] = { link = "String" },
 		-- ["@string.documentation"] = {},
-		["@string.regexp"] = { fg = palette.iris },
+		["@string.regexp"] = { fg = palette.text },
 		["@string.escape"] = { fg = palette.pine },
 		["@string.special"] = { link = "String" },
 		["@string.special.symbol"] = { link = "Identifier" },
@@ -308,17 +313,19 @@ local function set_highlights()
 		["@type.builtin"] = { fg = palette.foam, bold = styles.bold },
 		-- ["@type.definition"] = {},
 
-		["@attribute"] = { fg = palette.iris },
-		["@attribute.builtin"] = { fg = palette.iris, bold = styles.bold },
-		["@property"] = { fg = palette.foam, italic = styles.italic },
+		["@attribute"] = { fg = palette.text },
+		["@attribute.builtin"] = { fg = palette.text, bold = styles.bold },
+		["@attribute.python"] = { fg = palette.subtle },
+		["@attribute.builtin.python"] = { fg = palette.subtle, bold = styles.bold },
+		["@property"] = { fg = palette.text, italic = styles.italic },
 
 		["@function"] = { fg = palette.rose },
 		["@function.builtin"] = { fg = palette.rose, bold = styles.bold },
-		-- ["@function.call"] = {},
+		["@function.call"] = { fg = palette.rose },
 		["@function.macro"] = { link = "Function" },
 
 		["@function.method"] = { fg = palette.rose },
-		["@function.method.call"] = { fg = palette.iris },
+		["@function.method.call"] = { fg = palette.rose },
 
 		["@constructor"] = { fg = palette.foam },
 		["@operator"] = { link = "Operator" },
@@ -337,8 +344,8 @@ local function set_highlights()
 		["@keyword.conditional"] = { fg = palette.pine },
 		["@keyword.conditional.ternary"] = { fg = palette.pine },
 
-		["@keyword.directive"] = { fg = palette.iris },
-		["@keyword.directive.define"] = { fg = palette.iris },
+		["@keyword.directive"] = { fg = palette.pine },
+		["@keyword.directive.define"] = { fg = palette.pine },
 
 		--- Punctuation
 		["@punctuation.delimiter"] = { fg = palette.subtle },
@@ -401,7 +408,7 @@ local function set_highlights()
 		["@diff.delta"] = { bg = groups.git_change, blend = 20 },
 
 		["@tag"] = { link = "Tag" },
-		["@tag.attribute"] = { fg = palette.iris },
+		["@tag.attribute"] = { fg = palette.text },
 		["@tag.delimiter"] = { fg = palette.subtle },
 
 		--- Non-highlighting captures
@@ -416,6 +423,7 @@ local function set_highlights()
 		["@lsp.type.comment"] = {},
 		["@lsp.type.comment.c"] = { link = "@comment" },
 		["@lsp.type.comment.cpp"] = { link = "@comment" },
+    ["@lsp.type.macro.c"] = { link = "@constant.macro.c" },
 		["@lsp.type.enum"] = { link = "@type" },
 		["@lsp.type.interface"] = { link = "@interface" },
 		["@lsp.type.keyword"] = { link = "@keyword" },
@@ -1144,19 +1152,19 @@ local function set_highlights()
 	if config.options.enable.terminal then
 		vim.g.terminal_color_0 = palette.overlay -- black
 		vim.g.terminal_color_8 = palette.subtle -- bright black
-		vim.g.terminal_color_1 = palette.love -- red
-		vim.g.terminal_color_9 = palette.love -- bright red
-		vim.g.terminal_color_2 = palette.pine -- green
+		vim.g.terminal_color_1 = palette.love  -- red
+		vim.g.terminal_color_9 = palette.love  -- bright red
+		vim.g.terminal_color_2 = palette.pine  -- green
 		vim.g.terminal_color_10 = palette.pine -- bright green
-		vim.g.terminal_color_3 = palette.gold -- yellow
+		vim.g.terminal_color_3 = palette.gold  -- yellow
 		vim.g.terminal_color_11 = palette.gold -- bright yellow
-		vim.g.terminal_color_4 = palette.foam -- blue
+		vim.g.terminal_color_4 = palette.foam  -- blue
 		vim.g.terminal_color_12 = palette.foam -- bright blue
-		vim.g.terminal_color_5 = palette.iris -- magenta
+		vim.g.terminal_color_5 = palette.iris  -- magenta
 		vim.g.terminal_color_13 = palette.iris -- bright magenta
-		vim.g.terminal_color_6 = palette.rose -- cyan
+		vim.g.terminal_color_6 = palette.rose  -- cyan
 		vim.g.terminal_color_14 = palette.rose -- bright cyan
-		vim.g.terminal_color_7 = palette.text -- white
+		vim.g.terminal_color_7 = palette.text  -- white
 		vim.g.terminal_color_15 = palette.text -- bright white
 
 		-- Support StatusLineTerm & StatusLineTermNC from vim
