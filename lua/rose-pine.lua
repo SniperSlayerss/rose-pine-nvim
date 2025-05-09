@@ -318,12 +318,12 @@ local function set_highlights()
 		["@attribute.builtin.python"] = { fg = palette.subtle, bold = styles.bold },
 		["@property"] = { fg = palette.text, italic = styles.italic },
 
-		["@function"] = { fg = palette.text },
-		["@function.builtin"] = { fg = palette.text, bold = styles.bold },
+		["@function"] = { fg = palette.rose},
+		["@function.builtin"] = { fg = palette.rose, bold = styles.bold },
 		["@function.call"] = { fg = palette.rose },
-		["@function.macro"] = { fg = palette.text },
+		["@function.macro"] = { fg = palette.rose},
 
-		["@function.method"] = { fg = palette.text },
+		["@function.method"] = { fg = palette.rose},
 		["@function.method.call"] = { fg = palette.rose },
 
 		["@constructor"] = { fg = palette.foam },
