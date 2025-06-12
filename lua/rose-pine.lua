@@ -281,13 +281,13 @@ local function set_highlights()
 		["@variable.member"] = { fg = palette.text },
 
 		["@constant"] = { fg = palette.text },
-		["@constant.builtin"] = { fg = palette.pine, bold = styles.bold },
+		["@constant.builtin"] = { fg = palette.pine},
 		["@constant.macro"] = { fg = palette.text },
 		["@constant.macro.c"] = { fg = palette.text },
 		["@constant.c"] = { fg = palette.text },
 
 		["@module"] = { fg = palette.text },
-		["@module.builtin"] = { fg = palette.text, bold = styles.bold },
+		["@module.builtin"] = { fg = palette.text, },
 		["@module.c"] = { fg = palette.pine },
 		["@module.cpp"] = { fg = palette.pine },
 		["@label"] = { link = "Label" },
@@ -308,22 +308,22 @@ local function set_highlights()
 		["@number.float"] = { link = "Number" },
 		["@float"] = { link = "Number" },
 
-		["@type"] = { fg = palette.foam },
-		["@type.builtin"] = { fg = palette.foam, bold = styles.bold },
+		["@type"] = { fg = palette.foam},
+		["@type.builtin"] = { fg = palette.pine },
 		-- ["@type.definition"] = {},
 
 		["@attribute"] = { fg = palette.text },
-		["@attribute.builtin"] = { fg = palette.text, bold = styles.bold },
+		["@attribute.builtin"] = { fg = palette.text},
 		["@attribute.python"] = { fg = palette.subtle },
-		["@attribute.builtin.python"] = { fg = palette.subtle, bold = styles.bold },
+		["@attribute.builtin.python"] = { fg = palette.subtle},
 		["@property"] = { fg = palette.text, italic = styles.italic },
 
-		["@function"] = { fg = palette.rose},
-		["@function.builtin"] = { fg = palette.rose, bold = styles.bold },
+		["@function"] = { fg = palette.text},
+		["@function.builtin"] = { fg = palette.rose},
 		["@function.call"] = { fg = palette.rose },
 		["@function.macro"] = { fg = palette.rose},
 
-		["@function.method"] = { fg = palette.rose},
+		["@function.method"] = { fg = palette.text},
 		["@function.method.call"] = { fg = palette.rose },
 
 		["@constructor"] = { fg = palette.foam },
