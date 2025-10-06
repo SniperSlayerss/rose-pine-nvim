@@ -312,6 +312,9 @@ local function set_highlights()
 		["@type.builtin"] = { fg = palette.pine },
 		-- ["@type.definition"] = {},
 
+		["@type.python"] = { fg = palette.text},
+		["@type.builtin.python"] = { fg = palette.foam, bold = styles.bold },
+
 		["@attribute"] = { fg = palette.text },
 		["@attribute.builtin"] = { fg = palette.text},
 		["@attribute.python"] = { fg = palette.subtle },
@@ -319,12 +322,20 @@ local function set_highlights()
 		["@property"] = { fg = palette.text, italic = styles.italic },
 
 		["@function"] = { fg = palette.text},
-		["@function.builtin"] = { fg = palette.rose},
+		["@function.builtin"] = { fg = palette.rose, bold = styles.bold },
 		["@function.call"] = { fg = palette.rose },
-		["@function.macro"] = { fg = palette.rose},
+		["@function.macro"] = { fg = palette.text},
+		
+		["@function.python"] = { fg = palette.text},
+		["@function.builtin.python"] = { fg = palette.rose, bold = styles.bold },
+		["@function.call.python"] = { fg = palette.rose},
+		["@function.macro.python"] = { fg = palette.rose},
 
 		["@function.method"] = { fg = palette.text},
 		["@function.method.call"] = { fg = palette.rose },
+
+		["@function.method.python"] = { fg = palette.rose},
+		["@function.method.call.python"] = { fg = palette.rose},
 
 		["@constructor"] = { fg = palette.foam },
 		["@operator"] = { link = "Operator" },
