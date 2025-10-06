@@ -325,8 +325,8 @@ local function set_highlights()
 		["@function.builtin"] = { fg = palette.rose, bold = styles.bold },
 		["@function.call"] = { fg = palette.rose },
 		["@function.macro"] = { fg = palette.text},
-		
-		["@function.python"] = { fg = palette.text},
+
+		["@function.python"] = { fg = palette.rose},
 		["@function.builtin.python"] = { fg = palette.rose, bold = styles.bold },
 		["@function.call.python"] = { fg = palette.rose},
 		["@function.macro.python"] = { fg = palette.rose},
