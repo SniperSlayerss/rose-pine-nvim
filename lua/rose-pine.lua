@@ -16,7 +16,7 @@ local function set_highlights()
 		return {
 			fg = fg,
 			bg = (config.options.extend_background_behind_borders and not styles.transparency) and palette.surface
-					or "NONE",
+				or "NONE",
 		}
 	end
 
@@ -281,7 +281,7 @@ local function set_highlights()
 		["@variable.member"] = { fg = palette.text },
 
 		["@constant"] = { fg = palette.text },
-		["@constant.builtin"] = { fg = palette.pine},
+		["@constant.builtin"] = { fg = palette.pine },
 		["@constant.macro"] = { fg = palette.text },
 		["@constant.macro.c"] = { fg = palette.text },
 		["@constant.c"] = { fg = palette.text },
@@ -308,34 +308,34 @@ local function set_highlights()
 		["@number.float"] = { link = "Number" },
 		["@float"] = { link = "Number" },
 
-		["@type"] = { fg = palette.foam},
+		["@type"] = { fg = palette.foam },
 		["@type.builtin"] = { fg = palette.pine },
 		-- ["@type.definition"] = {},
 
-		["@type.python"] = { fg = palette.text},
+		["@type.python"] = { fg = palette.text },
 		["@type.builtin.python"] = { fg = palette.foam, bold = styles.bold },
 
 		["@attribute"] = { fg = palette.text },
-		["@attribute.builtin"] = { fg = palette.text},
+		["@attribute.builtin"] = { fg = palette.text },
 		["@attribute.python"] = { fg = palette.subtle },
-		["@attribute.builtin.python"] = { fg = palette.subtle},
+		["@attribute.builtin.python"] = { fg = palette.subtle },
 		["@property"] = { fg = palette.text, italic = styles.italic },
 
-		["@function"] = { fg = palette.text},
+		["@function"] = { fg = palette.text },
 		["@function.builtin"] = { fg = palette.rose, bold = styles.bold },
 		["@function.call"] = { fg = palette.rose },
-		["@function.macro"] = { fg = palette.text},
+		["@function.macro"] = { fg = palette.text },
 
-		["@function.python"] = { fg = palette.rose},
+		["@function.python"] = { fg = palette.rose },
 		["@function.builtin.python"] = { fg = palette.rose, bold = styles.bold },
-		["@function.call.python"] = { fg = palette.rose},
-		["@function.macro.python"] = { fg = palette.rose},
+		["@function.call.python"] = { fg = palette.rose },
+		["@function.macro.python"] = { fg = palette.rose },
 
-		["@function.method"] = { fg = palette.text},
+		["@function.method"] = { fg = palette.text },
 		["@function.method.call"] = { fg = palette.rose },
 
-		["@function.method.python"] = { fg = palette.rose},
-		["@function.method.call.python"] = { fg = palette.rose},
+		["@function.method.python"] = { fg = palette.rose },
+		["@function.method.call.python"] = { fg = palette.rose },
 
 		["@constructor"] = { fg = palette.foam },
 		["@operator"] = { link = "Operator" },
@@ -1047,6 +1047,13 @@ local function set_highlights()
 		Sneak = { fg = palette.base, bg = palette.love },
 		SneakCurrent = { link = "StatusLineTerm" },
 		SneakScope = { link = "IncSearch" },
+
+		CompileModeWarning = { fg = palette.rose},
+		CompileModeError = { fg = palette.love },
+		CompileModeInfo = { fg = palette.pine},
+		CompileModeMessageRow = { fg = palette.iris},
+		CompileModeMessageCol = { fg = palette.iris},
+		CompileModeCommandOutput = { fg = palette.pine },
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
@@ -1162,19 +1169,19 @@ local function set_highlights()
 	if config.options.enable.terminal then
 		vim.g.terminal_color_0 = palette.overlay -- black
 		vim.g.terminal_color_8 = palette.subtle -- bright black
-		vim.g.terminal_color_1 = palette.love  -- red
-		vim.g.terminal_color_9 = palette.love  -- bright red
-		vim.g.terminal_color_2 = palette.pine  -- green
+		vim.g.terminal_color_1 = palette.love -- red
+		vim.g.terminal_color_9 = palette.love -- bright red
+		vim.g.terminal_color_2 = palette.pine -- green
 		vim.g.terminal_color_10 = palette.pine -- bright green
-		vim.g.terminal_color_3 = palette.gold  -- yellow
+		vim.g.terminal_color_3 = palette.gold -- yellow
 		vim.g.terminal_color_11 = palette.gold -- bright yellow
-		vim.g.terminal_color_4 = palette.foam  -- blue
+		vim.g.terminal_color_4 = palette.foam -- blue
 		vim.g.terminal_color_12 = palette.foam -- bright blue
-		vim.g.terminal_color_5 = palette.iris  -- magenta
+		vim.g.terminal_color_5 = palette.iris -- magenta
 		vim.g.terminal_color_13 = palette.iris -- bright magenta
-		vim.g.terminal_color_6 = palette.rose  -- cyan
+		vim.g.terminal_color_6 = palette.rose -- cyan
 		vim.g.terminal_color_14 = palette.rose -- bright cyan
-		vim.g.terminal_color_7 = palette.text  -- white
+		vim.g.terminal_color_7 = palette.text -- white
 		vim.g.terminal_color_15 = palette.text -- bright white
 
 		-- Support StatusLineTerm & StatusLineTermNC from vim
